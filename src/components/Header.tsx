@@ -59,7 +59,7 @@ const Header = () => {
 
             <li>
               <a
-                href="https://drive.google.com/file/d/1fYNlFXzAF6B1h4HSPpNdVlTj6BwzrQ2r/view?usp=sharing"
+                href="https://drive.google.com/file/d/1fYNlFXzAF6B1h4HSPpNdVlTj6BwzrQ2r/preview"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`font-medium transition-colors hover:text-blue-600 ${isScrolled ? 'text-gray-700' : 'text-gray-600'
