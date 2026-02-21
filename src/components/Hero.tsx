@@ -23,7 +23,7 @@ const Hero = () => {
     { label: "SKILLS", id: "skills" },
     { label: "SUCCESS", id: "achievements" },
     { label: "GALLERY", id: "project-gallery" },
-    { label: "RESUME", href: "https://drive.google.com/file/d/10m7uUFkhKXIfyvgQGxNag6uikA51be_R/view?usp=drive_link" }
+    { label: "RESUME", href: "https://drive.google.com/file/d/1fYNlFXzAF6B1h4HSPpNdVlTj6BwzrQ2r/view?usp=sharing" }
   ];
 
   useEffect(() => {
