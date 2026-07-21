@@ -29,6 +29,19 @@ import img29 from '../assets/img_29.jpg';
 import img30 from '../assets/img_30.jpg';
 import img31 from '../assets/img_31.jpg';
 import img32 from '../assets/img_32.jpg';
+import img33 from '../assets/img_33.jpg';
+import img34 from '../assets/img_34.jpg';
+import img35 from '../assets/img_35.jpg';
+import img36 from '../assets/img_36.jpg';
+import img37 from '../assets/img_37.png';
+import img38 from '../assets/img_38.jpg';
+import img39 from '../assets/img_39.jpg';
+import img40 from '../assets/img_40.jpg';
+import img41 from '../assets/img_41.jpg';
+import img42 from '../assets/img_42.jpg';
+import img43 from '../assets/img_43.jpg';
+import img44 from '../assets/img_44.jpg';
+import img45 from '../assets/img_45.jpg';
 export const allProjects = [
   {
     title: "Mars Rover Competition 2024",
@@ -121,27 +134,27 @@ export const allProjects = [
     description: "Anatolian Rover Challenge 2025"
   },
   {
-    title: "Team Event",
+    title: "With Akib Zaman Sir",
     image: img25,
-    description: "Team bonding at sunset"
+    description: "URC 2024 USA"
   },
   {
-    title: "Rover Testing",
+    title: "URC 2024 USA",
     image: img26,
-    description: "Field testing in desert terrain"
+    description: "Team UMRT after Science Mission"
   },
   {
-    title: "Competition Indoor",
+    title: "URC 2025 USA",
     image: img27,
-    description: "Team at competition venue"
+    description: "On the way to USA to attend URC 2025"
   },
   {
-    title: "Team at Sunset",
+    title: "URC 2025 USA",
     image: img28,
-    description: "Mars Rover team outdoors"
+    description: "UIU Mars Rover team "
   },
   {
-    title: "UIU Campus Drone",
+    title: "Test Flying",
     image: img29,
     description: "Drone flight testing at UIU"
   },
@@ -159,6 +172,71 @@ export const allProjects = [
     title: "Field Team",
     image: img32,
     description: "Team ready for deployment"
+  },
+  {
+    title: "Project Event",
+    image: img33,
+    description: "Team project highlights"
+  },
+  {
+    title: "Field Action",
+    image: img34,
+    description: "Team working in the field"
+  },
+  {
+    title: "Group Gathering",
+    image: img35,
+    description: "Team group photo"
+  },
+  {
+    title: "Competition Prep",
+    image: img36,
+    description: "Getting ready for the challenge"
+  },
+  {
+    title: "Drone System",
+    image: img37,
+    description: "Aerial systems showcase"
+  },
+  {
+    title: "Field Test",
+    image: img38,
+    description: "Testing equipment outdoors"
+  },
+  {
+    title: "Team Briefing",
+    image: img39,
+    description: "Team discussing strategy"
+  },
+  {
+    title: "System Checks",
+    image: img40,
+    description: "Verifying systems before deployment"
+  },
+  {
+    title: "Evening Setup",
+    image: img41,
+    description: "Setting up operations at dusk"
+  },
+  {
+    title: "Group Pose",
+    image: img42,
+    description: "Team photo session"
+  },
+  {
+    title: "Hardware Prep",
+    image: img43,
+    description: "Preparing hardware components"
+  },
+  {
+    title: "Team Action",
+    image: img44,
+    description: "Team in action"
+  },
+  {
+    title: "Rover Details",
+    image: img45,
+    description: "Close-up of the systems"
   },
 ];
 
