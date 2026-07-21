@@ -1,5 +1,5 @@
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
+import React, { useState } from 'react';
+import { ArrowRight, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Import images explicitly
@@ -30,7 +30,6 @@ import img30 from '../assets/img_30.jpg';
 import img31 from '../assets/img_31.jpg';
 import img32 from '../assets/img_32.jpg';
 import img33 from '../assets/img_33.jpg';
-import img34 from '../assets/img_34.jpg';
 import img35 from '../assets/img_35.jpg';
 import img36 from '../assets/img_36.jpg';
 import img37 from '../assets/img_37.png';
@@ -174,74 +173,70 @@ export const allProjects = [
     description: "Judge Of URC Science Mission 2025"
   },
   {
-    title: "Project Event",
+    title: "Axios",
     image: img33,
-    description: "Team project highlights"
+    description: "UIU Mars Rover"
   },
   {
-    title: "Field Action",
-    image: img34,
-    description: "Team working in the field"
-  },
-  {
-    title: "Group Gathering",
+    title: "Flying Test in USA",
     image: img35,
-    description: "Team group photo"
+    description: "Preparing For URC 2025 Delivery Mission"
   },
   {
-    title: "Competition Prep",
+    title: "Aether",
     image: img36,
-    description: "Getting ready for the challenge"
+    description: "Long Range UAV with Dropping and Tracking System"
   },
   {
-    title: "Drone System",
+    title: "UMRT 2026",
     image: img37,
-    description: "Aerial systems showcase"
+    description: "Axios With Mark2"
   },
   {
-    title: "Field Test",
+    title: "CSE Project Show",
     image: img38,
-    description: "Testing equipment outdoors"
+    description: "3rd Position In SAD Lab"
   },
   {
-    title: "Team Briefing",
+    title: "CSE Project Show",
     image: img39,
-    description: "Team discussing strategy"
+    description: "UIU CSE Project Show 2025"
   },
   {
-    title: "System Checks",
+    title: "CSE Project Show",
     image: img40,
-    description: "Verifying systems before deployment"
+    description: "UIU CSE Project Show 2025"
   },
   {
-    title: "Evening Setup",
+    title: "Flying Test",
     image: img41,
     description: "Setting up operations at dusk"
   },
   {
-    title: "Group Pose",
+    title: "",
     image: img42,
-    description: "Team photo session"
+    description: ""
   },
   {
-    title: "Hardware Prep",
+    title: "Axios",
     image: img43,
-    description: "Preparing hardware components"
+    description: "UIU Mars Rover "
   },
   {
-    title: "Team Action",
+    title: "CSE Project Show",
     image: img44,
-    description: "Team in action"
+    description: "UIU CSE Project Show 2025"
   },
   {
-    title: "Rover Details",
+    title: "CSE Project Show",
     image: img45,
-    description: "Close-up of the systems"
+    description: "CSE Project Show"
   },
 ];
 
 const Gallery = () => {
   const displayedProjects = allProjects.slice(0, 8);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
     <section id="project-gallery" className="py-20 bg-black/40">
@@ -253,11 +248,11 @@ const Gallery = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
           {displayedProjects.map((project, index) => (
-            <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg shadow-black/30 hover:shadow-xl hover:shadow-black/50 transition-all duration-300 border border-white/5">
+            <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg shadow-black/30 hover:shadow-xl hover:shadow-black/50 transition-all duration-300 border border-white/5 cursor-pointer bg-[#0a0a0a]" onClick={() => setSelectedImage(project.image)}>
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-48 sm:h-56 object-cover group-hover:scale-110 transition-transform duration-500"
+                className="w-full h-48 sm:h-56 object-contain group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
@@ -281,6 +276,18 @@ const Gallery = () => {
           </div>
         )}
       </div>
+
+      {selectedImage && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4" onClick={() => setSelectedImage(null)}>
+          <button
+            className="absolute top-6 right-6 text-white hover:text-orange-500 transition-colors"
+            onClick={() => setSelectedImage(null)}
+          >
+            <X size={32} />
+          </button>
+          <img src={selectedImage} alt="Fullscreen" className="max-w-full max-h-[90vh] object-contain rounded-md" />
+        </div>
+      )}
     </section>
   );
 };
