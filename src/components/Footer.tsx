@@ -3,7 +3,7 @@ import { Facebook, Github, Linkedin, Heart } from 'lucide-react';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-12">
+    <footer className="bg-black/80 text-white py-12">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-8">
           <div>
@@ -16,24 +16,24 @@ const Footer = () => {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#experience" className="hover:text-white transition-colors">Experience</a></li>
-              <li><a href="#skills" className="hover:text-white transition-colors">Skills</a></li>
-              <li><a href="#project-gallery" className="hover:text-white transition-colors">Project Gallery</a></li>
-              <li><a href="#success" className="hover:text-white transition-colors">Success</a></li>
-              <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
+              <li><a href="#experience" className="hover:text-orange-500 transition-colors">Experience</a></li>
+              <li><a href="#skills" className="hover:text-orange-500 transition-colors">Skills</a></li>
+              <li><a href="#project-gallery" className="hover:text-orange-500 transition-colors">Project Gallery</a></li>
+              <li><a href="#success" className="hover:text-orange-500 transition-colors">Success</a></li>
+              <li><a href="#contact" className="hover:text-orange-500 transition-colors">Contact</a></li>
             </ul>
           </div>
 
           <div>
             <h4 className="text-lg font-semibold mb-4">Connect</h4>
             <div className="flex space-x-4 mb-4">
-              <a href="https://www.facebook.com/ifta.faishal.7" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.facebook.com/ifta.faishal.7" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-500 transition-colors">
                 <Facebook size={24} />
               </a>
-              <a href="https://github.com/ifta-faisal" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://github.com/ifta-faisal" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-500 transition-colors">
                 <Github size={24} />
               </a>
-              <a href="https://www.linkedin.com/in/ifta-faisal-030738255?" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+              <a href="https://www.linkedin.com/in/ifta-faisal-030738255?" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-orange-500 transition-colors">
                 <Linkedin size={24} />
               </a>
             </div>
@@ -44,7 +44,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+        <div className="border-t border-white/10 mt-8 pt-8 text-center">
           <p className="text-gray-400 flex items-center justify-center">
             All Rights Reserved By MD Ifta Faisal
           </p>

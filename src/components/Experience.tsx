@@ -3,8 +3,8 @@ import { Calendar, MapPin, Award } from 'lucide-react';
 
 const Experience = () => {
   const experiences = [
-  
-        {
+
+    {
       title: "Communication Sub Team Lead",
       company: "UIU Aerial Robotics Team",
       period: "2025 - Present",
@@ -18,7 +18,7 @@ const Experience = () => {
       location: "Dhaka Bangladesh",
       description: "Contributed to the team's success in renowned international competitions such as the Anatolian Rover Challenge (ARC) in Turkey and the University Rover Challenge (URC) in the United States.Led the team in prestigious international competitions including Anatolian Rover Challenge (ARC) in Turkey and University Rover Challenge (URC) in the United States."
     },
-      {
+    {
       title: "Executive",
       company: "UIU Robotics Club",
       period: "2024 - 2025",
@@ -35,14 +35,14 @@ const Experience = () => {
   ];
 
   const education = [
-    
-      {
+
+    {
       degree: "Bachelor of Science in Computer Science & Engineering",
       institution: "United International University",
       period: "2022 - Present",
       location: "Dhaka, Bangladesh"
     },
-    
+
     {
       degree: "Higher Secondary School Certificate",
       institution: "Ishwardi Govt. College",
@@ -55,35 +55,36 @@ const Experience = () => {
       period: "2017 - 20218",
       location: "Ishwardi, Pabna"
     }
-  
+
   ];
 
   return (
-    <section id="experience" className="py-20 bg-white">
-      <div className="container mx-auto px-6">
-        <h2 className="text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-16">
+    <section id="experience" className="py-20 bg-black/60">
+      <div className="max-w-6xl mx-auto px-6">
+        <h2 className="text-4xl lg:text-5xl font-bold text-center text-white mb-6">
           Experience & Education
         </h2>
-        
+        <div className="w-full h-[2px] bg-white/30 mb-12 relative z-10"></div>
+
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Experience */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-8 flex items-center">
-              <Award className="mr-3 text-blue-600" size={28} />
+            <h3 className="text-2xl font-bold text-white mb-8 flex items-center">
+              <Award className="mr-3 text-orange-500" size={28} />
               Professional Experience
             </h3>
             <div className="space-y-8">
               {experiences.map((exp, index) => (
-                <div key={index} className="border-l-4 border-blue-600 pl-6 pb-8">
-                  <h4 className="text-xl font-bold text-gray-900">{exp.title}</h4>
-                  <p className="text-lg text-blue-600 font-semibold">{exp.company}</p>
-                  <div className="flex items-center text-gray-600 mt-2 mb-3">
+                <div key={index} className="border-l-4 border-orange-500 pl-6 pb-8">
+                  <h4 className="text-xl font-bold text-white">{exp.title}</h4>
+                  <p className="text-lg text-orange-500 font-semibold">{exp.company}</p>
+                  <div className="flex items-center text-neutral-400 mt-2 mb-3">
                     <Calendar size={16} className="mr-2" />
                     <span className="mr-4">{exp.period}</span>
                     <MapPin size={16} className="mr-2" />
                     <span>{exp.location}</span>
                   </div>
-                  <p className="text-gray-700 leading-relaxed">{exp.description}</p>
+                  <p className="text-neutral-400 leading-relaxed">{exp.description}</p>
                 </div>
               ))}
             </div>
@@ -91,16 +92,16 @@ const Experience = () => {
 
           {/* Education */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-8 flex items-center">
-              <Award className="mr-3 text-green-600" size={28} />
+            <h3 className="text-2xl font-bold text-white mb-8 flex items-center">
+              <Award className="mr-3 text-orange-500" size={28} />
               Education
             </h3>
             <div className="space-y-8">
               {education.map((edu, index) => (
-                <div key={index} className="border-l-4 border-green-600 pl-6 pb-8">
-                  <h4 className="text-xl font-bold text-gray-900">{edu.degree}</h4>
-                  <p className="text-lg text-green-600 font-semibold">{edu.institution}</p>
-                  <div className="flex items-center text-gray-600 mt-2 mb-3">
+                <div key={index} className="border-l-4 border-orange-500 pl-6 pb-8">
+                  <h4 className="text-xl font-bold text-white">{edu.degree}</h4>
+                  <p className="text-lg text-orange-500 font-semibold">{edu.institution}</p>
+                  <div className="flex items-center text-neutral-400 mt-2 mb-3">
                     <Calendar size={16} className="mr-2" />
                     <span className="mr-4">{edu.period}</span>
                     <MapPin size={16} className="mr-2" />

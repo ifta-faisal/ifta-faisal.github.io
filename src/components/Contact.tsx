@@ -45,7 +45,7 @@ const Contact = () => {
           title: "Success!",
           text: "Your message has been sent.",
           icon: "success",
-          confirmButtonColor: "#2563eb"
+          confirmButtonColor: "#f97316"
         });
 
         setFormData({
@@ -76,44 +76,46 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-20 bg-black/60">
+      <div className="container mx-auto px-6 relative">
         
-        <h2 className="text-4xl lg:text-5xl font-bold text-center text-gray-900 mb-16">
+        <h2 className="text-4xl lg:text-5xl font-bold text-center text-white mb-6 relative z-10">
           Get In Touch
         </h2>
-        
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="w-full h-[2px] bg-white/30 mb-12 relative z-10"></div>
+
+        <div className="grid lg:grid-cols-2 gap-16 relative z-10">
+          <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-orange-500/10 blur-[120px] rounded-full pointer-events-none"></div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Let's Connect</h3>
-            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+            <h3 className="text-2xl font-bold text-white mb-8">Let's Connect</h3>
+            <p className="text-lg text-neutral-400 mb-8 leading-relaxed">
               If you're interested in collaborating, exploring my work, or discussing opportunities in UAVs and robotics, feel free to reach out—I'd be happy to connect.
             </p>
 
             <div className="space-y-6">
               <div className="flex items-center">
-                <Mail className="text-blue-600 mr-4" size={24} />
+                <Mail className="text-orange-500 mr-4" size={24} />
                 <div>
-                  <h4 className="font-semibold text-gray-900">Email</h4>
-                  <p className="text-gray-600">iftafaisal759@gmail.com</p>
+                  <h4 className="font-semibold text-white">Email</h4>
+                  <p className="text-neutral-400">iftafaisal759@gmail.com</p>
                 </div>
               </div>
 
               <div className="flex items-center">
-                <Phone className="text-blue-600 mr-4" size={24} />
+                <Phone className="text-orange-500 mr-4" size={24} />
                 <div>
-                  <h4 className="font-semibold text-gray-900">Phone</h4>
-                  <p className="text-gray-600">+8801303897972</p>
+                  <h4 className="font-semibold text-white">Phone</h4>
+                  <p className="text-neutral-400">+8801303897972</p>
                 </div>
               </div>
 
               <div className="flex items-center">
-                <MapPin className="text-blue-600 mr-4" size={24} />
+                <MapPin className="text-orange-500 mr-4" size={24} />
                 <div>
-                  <h4 className="font-semibold text-gray-900">Location</h4>
-                  <p className="text-gray-600">Dhaka, Bangladesh</p>
+                  <h4 className="font-semibold text-white">Location</h4>
+                  <p className="text-neutral-400">Dhaka, Bangladesh</p>
                 </div>
               </div>
             </div>
@@ -125,58 +127,58 @@ const Contact = () => {
 
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                  <label className="block text-sm font-medium text-neutral-400 mb-2">Name</label>
                   <input
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600"
+                    className="w-full px-4 py-3 bg-[#171717] text-white border border-white/10 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-all"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                  <label className="block text-sm font-medium text-neutral-400 mb-2">Email</label>
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600"
+                    className="w-full px-4 py-3 bg-[#171717] text-white border border-white/10 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-all"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                <label className="block text-sm font-medium text-neutral-400 mb-2">Subject</label>
                 <input
                   type="text"
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600"
+                  className="w-full px-4 py-3 bg-[#171717] text-white border border-white/10 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-all"
                 />
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                <label className="block text-sm font-medium text-neutral-400 mb-2">Message</label>
                 <textarea
                   name="message"
                   rows={6}
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 resize-none"
+                  className="w-full px-4 py-3 bg-[#171717] text-white border border-white/10 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition-all resize-none"
                 />
               </div>
 
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold flex items-center justify-center hover:bg-blue-700 transition"
+                className="w-full bg-orange-500 text-black py-3 px-6 rounded-lg font-bold flex items-center justify-center hover:bg-orange-600 transition-colors shadow-[0_0_15px_rgba(249,115,22,0.3)] hover:shadow-[0_0_20px_rgba(249,115,22,0.5)]"
               >
                 <Send className="mr-2" size={20} />
                 {loading ? "Sending..." : "Send Message"}
