@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import { FourSquare } from 'react-loading-indicators';
-import bg4 from './assets/Backround/4th.jpeg';
+import bg4 from './assets/Backround/4th.webp';
 import Home from './pages/Home';
 import GalleryPage from './pages/GalleryPage';
 import BackgroundSlider from './components/BackgroundSlider';

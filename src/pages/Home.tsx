@@ -13,27 +13,41 @@ import Footer from '../components/Footer';
 import Achievements from '../components/Achievements';
 import ScrollToTop from '../components/ScrollToTop';
 import ScrollReveal from '../components/ScrollReveal';
+import LazySection from '../components/LazySection';
 
 const Home = () => {
   return (
     <>
       <Header />
       <Hero />
-      <ScrollReveal><About /></ScrollReveal>
-      <ScrollReveal><Experience /></ScrollReveal>
-      <ScrollReveal><Skills /></ScrollReveal>
-      <ScrollReveal><Projects /></ScrollReveal>
-      <ScrollReveal><Gallery /></ScrollReveal>
+      <LazySection id="about">
+        <ScrollReveal><About /></ScrollReveal>
+      </LazySection>
+      <LazySection id="experience">
+        <ScrollReveal><Experience /></ScrollReveal>
+      </LazySection>
+      <LazySection id="skills">
+        <ScrollReveal><Skills /></ScrollReveal>
+      </LazySection>
+      <LazySection id="projects">
+        <ScrollReveal><Projects /></ScrollReveal>
+      </LazySection>
+      <LazySection id="project-gallery">
+        <ScrollReveal><Gallery /></ScrollReveal>
+      </LazySection>
       {/* Spacer to view background image */}
       <div className="min-h-screen w-full bg-transparent relative">
         {/* Scroll Indicator */}
         <div
           className="absolute bottom-12 left-8 md:left-12 z-50 flex flex-col items-center opacity-80 hover:opacity-100 cursor-pointer transition-opacity duration-300"
           onClick={() => {
-            const nextSection = document.getElementById('achievements');
-            if (nextSection) {
-              nextSection.scrollIntoView({ behavior: 'smooth' });
-            }
+            window.dispatchEvent(new CustomEvent('force-load-section', { detail: 'achievements' }));
+            setTimeout(() => {
+              const nextSection = document.getElementById('achievements');
+              if (nextSection) {
+                nextSection.scrollIntoView({ behavior: 'smooth' });
+              }
+            }, 10);
           }}
         >
           <div className="flex flex-col items-center gap-3">
@@ -49,9 +63,15 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <ScrollReveal><Achievements /></ScrollReveal>
-      <ScrollReveal><Success /></ScrollReveal>
-      <ScrollReveal><Contact /></ScrollReveal>
+      <LazySection id="achievements">
+        <ScrollReveal><Achievements /></ScrollReveal>
+      </LazySection>
+      <LazySection id="success">
+        <ScrollReveal><Success /></ScrollReveal>
+      </LazySection>
+      <LazySection id="contact">
+        <ScrollReveal><Contact /></ScrollReveal>
+      </LazySection>
       <Footer />
       <ScrollToTop />
     </>

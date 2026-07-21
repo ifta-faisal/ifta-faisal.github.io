@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Facebook, Github, Linkedin, ArrowLeft, ArrowRight, X, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import img1 from '../assets/img_1.jpg';
-import img15 from '../assets/img_15.jpg';
-import img16 from '../assets/img_16.jpg';
-import img24 from '../assets/img_24.jpg';
+import img1 from '../assets/img_1.webp';
+import img15 from '../assets/img_15.webp';
+import img16 from '../assets/img_16.webp';
+import img24 from '../assets/img_24.webp';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -82,7 +82,7 @@ const Hero = () => {
       <div className="absolute inset-0">
         {slides.map((slide, idx) => (
           <div key={idx} className={`absolute inset-0 transition-opacity duration-1000 ${idx === currentSlide ? 'opacity-100' : 'opacity-0'}`}>
-            <img src={slide.image} alt={slide.title} className="w-full h-full object-cover object-center" />
+            <img loading={idx === 0 ? "eager" : "lazy"} src={slide.image} alt={slide.title} className="w-full h-full object-cover object-center" />
             <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-black/20 to-transparent"></div>
           </div>
         ))}

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import bg1 from '../assets/Backround/1st.jpg';
-import bg2 from '../assets/Backround/2nd.jpg';
+import bg1 from '../assets/Backround/1st.webp';
+import bg2 from '../assets/Backround/2nd.webp';
 import bg3 from '../assets/Backround/3rd.webp';
-import bg4 from '../assets/Backround/4th.jpeg';
+import bg4 from '../assets/Backround/4th.webp';
 
 const BackgroundSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -26,7 +26,7 @@ const BackgroundSlider = () => {
           key={idx}
           className={`absolute inset-0 transition-opacity duration-1000 ${idx === currentSlide ? 'opacity-100' : 'opacity-0'}`}
         >
-          <img src={slide.image} alt={slide.title} className="w-full h-[130vh] object-cover object-center" />
+          <img loading={idx === 0 ? "eager" : "lazy"} src={slide.image} alt={slide.title} className="w-full h-[130vh] object-cover object-center" />
         </div>
       ))}
       <div className="absolute inset-0 bg-black/20"></div>

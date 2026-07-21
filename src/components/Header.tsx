@@ -19,6 +19,9 @@ const Header = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
+    // Force the LazySection to load immediately before we scroll to it
+    window.dispatchEvent(new CustomEvent('force-load-section', { detail: sectionId }));
+
     if (!isHomePage) {
       navigate('/');
       setTimeout(() => {
@@ -31,11 +34,13 @@ const Header = () => {
       return;
     }
 
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMobileMenuOpen(false);
-    }
+    setTimeout(() => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+        setIsMobileMenuOpen(false);
+      }
+    }, 10);
   };
 
   const navItems = [

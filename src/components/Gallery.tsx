@@ -3,42 +3,42 @@ import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Import images explicitly
-import img4 from '../assets/img_4.jpg';
-import img5 from '../assets/img_5.jpg';
-import img6 from '../assets/img_6.jpg';
-import img7 from '../assets/img_7.jpg';
-import img8 from '../assets/img_8.jpg';
-import img9 from '../assets/img_9.png';
-import img10 from '../assets/img_10.jpg';
-import img11 from '../assets/img_11.jpg';
-import img12 from '../assets/img_12.jpg';
-import img13 from '../assets/img_13.jpg';
-import img14 from '../assets/img_14.jpg';
-import img17 from '../assets/img_17.jpg';
-import img18 from '../assets/img_18.jpeg';
-import img19 from '../assets/img_19.jpeg';
-import img20 from '../assets/img_20.jpeg';
-import img21 from '../assets/img_21.jpeg';
-import img22 from '../assets/img_22.jpeg';
-import img23 from '../assets/img_23.jpeg';
-import img25 from '../assets/img_25.jpg';
-import img26 from '../assets/img_26.jpg';
-import img27 from '../assets/img_27.jpg';
-import img28 from '../assets/img_28.jpg';
-import img29 from '../assets/img_29.jpg';
-import img30 from '../assets/img_30.jpg';
-import img31 from '../assets/img_31.jpg';
-import img32 from '../assets/img_32.jpg';
-import img33 from '../assets/img_33.jpg';
-import img35 from '../assets/img_35.jpg';
-import img36 from '../assets/img_36.jpg';
-import img37 from '../assets/img_37.png';
-import img38 from '../assets/img_38.jpg';
-import img39 from '../assets/img_39.jpg';
-import img42 from '../assets/img_42.jpg';
-import img43 from '../assets/img_43.jpg';
-import img44 from '../assets/img_44.jpg';
-import img45 from '../assets/img_45.jpg';
+import img4 from '../assets/img_4.webp';
+import img5 from '../assets/img_5.webp';
+import img6 from '../assets/img_6.webp';
+import img7 from '../assets/img_7.webp';
+import img8 from '../assets/img_8.webp';
+import img9 from '../assets/img_9.webp';
+import img10 from '../assets/img_10.webp';
+import img11 from '../assets/img_11.webp';
+import img12 from '../assets/img_12.webp';
+import img13 from '../assets/img_13.webp';
+import img14 from '../assets/img_14.webp';
+import img17 from '../assets/img_17.webp';
+import img18 from '../assets/img_18.webp';
+import img19 from '../assets/img_19.webp';
+import img20 from '../assets/img_20.webp';
+import img21 from '../assets/img_21.webp';
+import img22 from '../assets/img_22.webp';
+import img23 from '../assets/img_23.webp';
+import img25 from '../assets/img_25.webp';
+import img26 from '../assets/img_26.webp';
+import img27 from '../assets/img_27.webp';
+import img28 from '../assets/img_28.webp';
+import img29 from '../assets/img_29.webp';
+import img30 from '../assets/img_30.webp';
+import img31 from '../assets/img_31.webp';
+import img32 from '../assets/img_32.webp';
+import img33 from '../assets/img_33.webp';
+import img35 from '../assets/img_35.webp';
+import img36 from '../assets/img_36.webp';
+import img37 from '../assets/img_37.webp';
+import img38 from '../assets/img_38.webp';
+import img39 from '../assets/img_39.webp';
+import img42 from '../assets/img_42.webp';
+import img43 from '../assets/img_43.webp';
+import img44 from '../assets/img_44.webp';
+import img45 from '../assets/img_45.webp';
 export const allProjects = [
   {
     title: "Mars Rover Competition 2024",
@@ -237,6 +237,7 @@ const Gallery = () => {
           {displayedProjects.map((project, index) => (
             <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg shadow-black/30 hover:shadow-xl hover:shadow-black/50 transition-all duration-300 border border-white/5">
               <img
+                loading="lazy"
                 src={project.image}
                 alt={project.title}
                 className="w-full h-48 sm:h-56 object-cover group-hover:scale-110 transition-transform duration-500"

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Github, FolderGit2 } from 'lucide-react';
-import imgRescue from '../assets/projects/Rescue.jpg';
-import imgAether from '../assets/projects/Aether.jpg';
-import imgDeadCat from '../assets/projects/Dead_cat.jpg';
-import imgAyojok from '../assets/projects/Ayojok.jpeg';
-import imgMetro from '../assets/projects/Metro.jpeg';
-import CreditCard from '../assets/projects/creditcard.jpeg';
+import imgRescue from '../assets/projects/Rescue.webp';
+import imgAether from '../assets/projects/Aether.webp';
+import imgDeadCat from '../assets/projects/Dead_cat.webp';
+import imgAyojok from '../assets/projects/Ayojok.webp';
+import imgMetro from '../assets/projects/Metro.webp';
+import CreditCard from '../assets/projects/creditcard.webp';
 
 const projects = [
   {
@@ -64,6 +64,7 @@ const Projects = () => {
             >
               <div className="w-full">
                 <img 
+                  loading="lazy"
                   src={project.image} 
                   alt={project.title} 
                   className="w-full h-auto object-cover"
