@@ -21,7 +21,14 @@ import img20 from '../assets/img_20.jpeg';
 import img21 from '../assets/img_21.jpeg';
 import img22 from '../assets/img_22.jpeg';
 import img23 from '../assets/img_23.jpeg';
-
+import img25 from '../assets/img_25.jpg';
+import img26 from '../assets/img_26.jpg';
+import img27 from '../assets/img_27.jpg';
+import img28 from '../assets/img_28.jpg';
+import img29 from '../assets/img_29.jpg';
+import img30 from '../assets/img_30.jpg';
+import img31 from '../assets/img_31.jpg';
+import img32 from '../assets/img_32.jpg';
 export const allProjects = [
   {
     title: "Mars Rover Competition 2024",
@@ -112,6 +119,46 @@ export const allProjects = [
     title: "ARC 2025",
     image: img23,
     description: "Anatolian Rover Challenge 2025"
+  },
+  {
+    title: "Team Event",
+    image: img25,
+    description: "Team bonding at sunset"
+  },
+  {
+    title: "Rover Testing",
+    image: img26,
+    description: "Field testing in desert terrain"
+  },
+  {
+    title: "Competition Indoor",
+    image: img27,
+    description: "Team at competition venue"
+  },
+  {
+    title: "Team at Sunset",
+    image: img28,
+    description: "Mars Rover team outdoors"
+  },
+  {
+    title: "UIU Campus Drone",
+    image: img29,
+    description: "Drone flight testing at UIU"
+  },
+  {
+    title: "UIU Campus Flight",
+    image: img30,
+    description: "Evening flight session at campus"
+  },
+  {
+    title: "FPV Drone Build",
+    image: img31,
+    description: "Custom FPV drone in hand"
+  },
+  {
+    title: "Field Team",
+    image: img32,
+    description: "Team ready for deployment"
   },
 ];
 
