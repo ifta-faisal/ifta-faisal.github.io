@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { ArrowRight, X } from 'lucide-react';
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Import images explicitly
@@ -35,8 +35,6 @@ import img36 from '../assets/img_36.jpg';
 import img37 from '../assets/img_37.png';
 import img38 from '../assets/img_38.jpg';
 import img39 from '../assets/img_39.jpg';
-import img40 from '../assets/img_40.jpg';
-import img41 from '../assets/img_41.jpg';
 import img42 from '../assets/img_42.jpg';
 import img43 from '../assets/img_43.jpg';
 import img44 from '../assets/img_44.jpg';
@@ -203,16 +201,6 @@ export const allProjects = [
     description: "UIU CSE Project Show 2025"
   },
   {
-    title: "CSE Project Show",
-    image: img40,
-    description: "UIU CSE Project Show 2025"
-  },
-  {
-    title: "Flying Test",
-    image: img41,
-    description: "Setting up operations at dusk"
-  },
-  {
     title: "",
     image: img42,
     description: ""
@@ -236,7 +224,6 @@ export const allProjects = [
 
 const Gallery = () => {
   const displayedProjects = allProjects.slice(0, 8);
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
     <section id="project-gallery" className="py-20 bg-black/40">
@@ -248,7 +235,7 @@ const Gallery = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
           {displayedProjects.map((project, index) => (
-            <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg shadow-black/30 hover:shadow-xl hover:shadow-black/50 transition-all duration-300 border border-white/5 cursor-pointer" onClick={() => setSelectedImage(project.image)}>
+            <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg shadow-black/30 hover:shadow-xl hover:shadow-black/50 transition-all duration-300 border border-white/5">
               <img
                 src={project.image}
                 alt={project.title}
@@ -276,18 +263,6 @@ const Gallery = () => {
           </div>
         )}
       </div>
-
-      {selectedImage && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4" onClick={() => setSelectedImage(null)}>
-          <button
-            className="absolute top-6 right-6 text-white hover:text-orange-500 transition-colors"
-            onClick={() => setSelectedImage(null)}
-          >
-            <X size={32} />
-          </button>
-          <img src={selectedImage} alt="Fullscreen" className="max-w-full max-h-[90vh] object-contain rounded-md" />
-        </div>
-      )}
     </section>
   );
 };
