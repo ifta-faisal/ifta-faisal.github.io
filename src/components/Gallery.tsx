@@ -159,9 +159,9 @@ export const allProjects = [
     description: "Drone flight testing at UIU"
   },
   {
-    title: "UIU Campus Flight",
+    title: "Tiny Whoop ",
     image: img30,
-    description: "Evening flight session at campus"
+    description: "Tiny Whoop "
   },
   {
     title: "FPV Drone Build",
@@ -169,9 +169,9 @@ export const allProjects = [
     description: "Custom FPV drone in hand"
   },
   {
-    title: "Field Team",
+    title: "URC 2025",
     image: img32,
-    description: "Team ready for deployment"
+    description: "Judge Of URC Science Mission 2025"
   },
   {
     title: "Project Event",
