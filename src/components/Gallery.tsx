@@ -248,11 +248,11 @@ const Gallery = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
           {displayedProjects.map((project, index) => (
-            <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg shadow-black/30 hover:shadow-xl hover:shadow-black/50 transition-all duration-300 border border-white/5 cursor-pointer bg-[#0a0a0a]" onClick={() => setSelectedImage(project.image)}>
+            <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg shadow-black/30 hover:shadow-xl hover:shadow-black/50 transition-all duration-300 border border-white/5 cursor-pointer" onClick={() => setSelectedImage(project.image)}>
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-48 sm:h-56 object-contain group-hover:scale-110 transition-transform duration-500"
+                className="w-full h-48 sm:h-56 object-cover group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
