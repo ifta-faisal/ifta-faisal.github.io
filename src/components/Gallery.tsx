@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useCallback, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+
+import LightGallery from 'lightgallery/react';
+import lgZoom from 'lightgallery/plugins/zoom';
+import lgThumbnail from 'lightgallery/plugins/thumbnail';
+import 'lightgallery/css/lightgallery.css';
+import 'lightgallery/css/lg-zoom.css';
+import 'lightgallery/css/lg-thumbnail.css';
 
 // Import images explicitly
 import img4 from '../assets/img_4.webp';
@@ -224,6 +231,23 @@ export const allProjects = [
 
 const Gallery = () => {
   const displayedProjects = allProjects.slice(0, 8);
+  const lgRef = useRef<any>(null);
+
+  const onInit = useCallback((detail: any) => {
+    if (detail) {
+      lgRef.current = detail.instance;
+    }
+  }, []);
+
+  const openGallery = useCallback((index: number) => {
+    lgRef.current?.openGallery(index);
+  }, []);
+
+  const dynamicEl = allProjects.map(project => ({
+    src: project.image,
+    thumb: project.image,
+    subHtml: `<h4>${project.title}</h4><p>${project.description}</p>`
+  }));
 
   return (
     <section id="project-gallery" className="py-20 bg-black/40">
@@ -235,12 +259,12 @@ const Gallery = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative z-10">
           {displayedProjects.map((project, index) => (
-            <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg shadow-black/30 hover:shadow-xl hover:shadow-black/50 transition-all duration-300 border border-white/5">
+            <div key={index} onClick={() => openGallery(index)} className="group relative overflow-hidden rounded-xl shadow-lg shadow-black/30 hover:shadow-xl hover:shadow-black/50 transition-all duration-300 border border-white/5 cursor-pointer">
               <img
                 loading="lazy"
                 src={project.image}
                 alt={project.title}
-                className="w-full h-48 sm:h-56 object-cover group-hover:scale-110 transition-transform duration-500"
+                className="w-full h-40 md:h-48 lg:h-40 xl:h-44 object-cover group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
@@ -264,6 +288,13 @@ const Gallery = () => {
           </div>
         )}
       </div>
+
+      <LightGallery
+        onInit={onInit}
+        dynamic={true}
+        dynamicEl={dynamicEl}
+        plugins={[lgZoom, lgThumbnail]}
+      />
     </section>
   );
 };
