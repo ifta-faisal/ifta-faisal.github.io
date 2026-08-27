@@ -32,7 +32,7 @@ function App() {
         className={`fixed inset-0 flex items-center justify-center z-[1000] bg-cover bg-center transition-opacity duration-700 ${loading ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
         style={{ backgroundImage: `url(${bg4})` }}
       >
-        <div className="absolute inset-0 bg-black/80 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-black/75 backdrop-blur-[1px]"></div>
         <div className="relative z-10">
           <FourSquare color="#dd4b4b" size="medium" text="" textColor="" />
         </div>
